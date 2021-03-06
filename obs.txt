@@ -1,0 +1,24 @@
+ yarn create next-app moveit-next
+
+
+
+ yarn add typescript @types/react @types/react-dom @types/node -D
+
+ yarn dev
+
+ yarn add js-cookie
+ yarn add @typesqjs-cookie
+
+ yarn add @types/js-cookie -D
+
+
+ vercel cli
+
+ vercel login email
+ vercel // subir
+
+ vercel --prod atualizar
+
+
+
+ yarn add react-icons

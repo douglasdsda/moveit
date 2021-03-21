@@ -22,3 +22,7 @@
 
 
  yarn add react-icons
+
+ yarn add next-auth
+
+  yarn add  -D @types/next-auth

@@ -1,8 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { setTimeout } from "timers";
 
-import styles from "../styles/components/Countdown.module.css";
-import { CountdownContext } from "../contexts/CountdownContext";
+ 
+import { CountdownContext } from "../../contexts/CountdownContext";
+import * as S from "./styles";
 
 function Countdown() {
   const {
@@ -22,7 +23,7 @@ function Countdown() {
 
   return (
     <div>
-      <div className={styles.countdownContainer}>
+      <S.Container>
         <div>
           <span>{minuteLeft}</span>
           <span>{minuteRight}</span>
@@ -32,34 +33,35 @@ function Countdown() {
           <span>{secondsLeft}</span>
           <span>{secondsRight}</span>
         </div>
-      </div>
+      </S.Container>
 
       {hasFinished ? (
-        <button
+        <S.CountdownButton
           onClick={resetCountDown}
           disabled
-          className={styles.countdownButton}
+       
         >
           Ciclo encerrado
-        </button>
+        </S.CountdownButton>
       ) : (
         <>
           {isActive ? (
-            <button
+            <S.CountdownButtonActive
               onClick={resetCountDown}
               type="button"
-              className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
+              className="countdownButtonActive"
+              // className={`${styles.countdownButton} ${styles.countdownButtonActive}`}
             >
               Abandonar ciclo
-            </button>
+            </S.CountdownButtonActive>
           ) : (
-            <button
+            <S.CountdownButton
               onClick={startCountDown}
               type="button"
-              className={styles.countdownButton}
+              // className={styles.countdownButton}
             >
               Iniciar um ciclo
-            </button>
+            </S.CountdownButton>
           )}
         </>
       )}

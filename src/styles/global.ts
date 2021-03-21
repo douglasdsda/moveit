@@ -1,10 +1,17 @@
- * {
-  margin: 0;
+import { createGlobalStyle, css } from "styled-components";
+ 
+
+const GlobalStyles = createGlobalStyle`
+  *{
+    margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-:root {
+  :root {
   --white:#fff;
   --background: #F2F3F5;
   --gray-line: #DCDDE0;
@@ -24,7 +31,8 @@
 
   }
 
-body {
+
+  body {
   background: var(--background);
   color: var(--text);
 }
@@ -53,6 +61,7 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-
  
+  
+`;
+export default GlobalStyles;
